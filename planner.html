@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Fampla-Planner</title>
+  </head>
+  <body>
+    <h2 id="clock">00:00:00</h2>
+
+    <label for="family-role">가족 구성원 중 자신의 역할은 무엇 인가요? :</label>
+    <input list="role" id="family-role" name="family-role" />
+
+    <datalist id="role">
+      <option value="아버지(父)"></option>
+      <option value="어머니(母)"></option>
+      <option value="아들(子)"></option>
+      <option value="딸(女)"></option>
+    </datalist>
+
+    <form id="todo-form">
+      <input type="text" placeholder="오늘의 할일을 적어주세요" required />
+    </form>
+    <ul id="todo-list"></ul>
+
+    <script src="javascript/clock.js"></script>
+    <script scr="javascript/work-list"></script>
+  </body>
+</html>
