@@ -6,6 +6,7 @@ body {
 
 #welcome-header {
   color: orange;
+  margin-bottom: 20px;
 }
 
 .login__main-title {
@@ -61,6 +62,7 @@ body {
   text-decoration: underline;
   color: inherit;
   transition: color 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .login a:hover {

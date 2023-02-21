@@ -5,27 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="screenshot/Fampla-logo.jpg" />
     <title>Fampla-Planner</title>
   </head>
   <body>
+    <h1 class="login__main-title">Fampla</h1>
     <h2 id="clock">00:00:00</h2>
+    <div class="role-box">
+      <label for="family-role"
+        >가족 구성원 중 자신의 역할은 무엇 인가요? :</label
+      >
+      <input list="role" id="family-role" name="family-role" />
 
-    <label for="family-role">가족 구성원 중 자신의 역할은 무엇 인가요? :</label>
-    <input list="role" id="family-role" name="family-role" />
-
-    <datalist id="role">
-      <option value="아버지(父)"></option>
-      <option value="어머니(母)"></option>
-      <option value="아들(子)"></option>
-      <option value="딸(女)"></option>
-    </datalist>
-
+      <datalist id="role">
+        <option value="할아버지👴"></option>
+        <option value="할머니👵"></option>
+        <option value="아버지👨"></option>
+        <option value="어머니👩"></option>
+        <option value="아들🧑"></option>
+        <option value="딸👧"></option>
+        <option value="댕댕이🐶"></option>
+      </datalist>
+    </div>
     <form id="todo-form">
-      <input type="text" placeholder="오늘의 할일을 적어주세요" required />
+      <input
+        type="text"
+        placeholder="계획 또는 부탁을 적은 후 Enter를 눌러 업로드 하세요!"
+        required
+        size="67"
+      />
     </form>
     <ul id="todo-list"></ul>
 
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+
     <script src="javascript/clock.js"></script>
     <script scr="javascript/work-list"></script>
+    <script src="javascript/quote.js"></script>
+    <script src="javascript/backgrounds.js"></script>
   </body>
 </html>

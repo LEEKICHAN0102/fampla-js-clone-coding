@@ -1,4 +1,53 @@
 #clock {
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.role-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: white;
+}
+
+#family-role {
+  margin-left: 9px;
+}
+
+#todo-form {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: center;
+}
+
+#todo-form input::placeholder {
+  text-align: center;
+}
+
+#todo-form input:focus::placeholder {
+  color: transparent;
+}
+
+img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 75%;
+  filter: brightness(50%);
+}
+
+#quote {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 10px;
+}
+
+#quote span:last-child {
+  margin-top: 10px;
 }
