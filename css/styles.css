@@ -4,7 +4,3 @@
 @import "screens/login.css";
 @import "screens/main.css";
 @import "screens/plan.css";
-
-body {
-  height: 100vh;
-}

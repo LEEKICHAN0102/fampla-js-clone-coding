@@ -11,23 +11,31 @@
   <body>
     <h1 class="login__main-title">Fampla</h1>
     <h2 id="clock">00:00:00</h2>
-    <div class="role-box">
+    <form id="role-box">
       <label for="family-role"
         >가족 구성원 중 자신의 역할은 무엇 인가요? :</label
       >
-      <input list="role" id="family-role" name="family-role" />
+      <input
+        list="role"
+        id="family-role"
+        required
+        maxlength="6"
+        name="family-role"
+      />
 
       <datalist id="role">
         <option value="할아버지👴"></option>
         <option value="할머니👵"></option>
         <option value="아버지👨"></option>
         <option value="어머니👩"></option>
-        <option value="아들🧑"></option>
-        <option value="딸👧"></option>
+        <option value="도련님🧑"></option>
+        <option value="아가씨👧"></option>
         <option value="댕댕이🐶"></option>
       </datalist>
-    </div>
-    <form id="todo-form">
+      <button>등록</button>
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="POR-form">
       <input
         type="text"
         placeholder="계획 또는 부탁을 적은 후 Enter를 눌러 업로드 하세요!"
@@ -35,15 +43,15 @@
         size="67"
       />
     </form>
-    <ul id="todo-list"></ul>
+    <ul id="POR-list"></ul>
 
     <div id="quote">
       <span></span>
       <span></span>
     </div>
 
+    <script src="javascript/role.js"></script>
     <script src="javascript/clock.js"></script>
-    <script scr="javascript/work-list"></script>
     <script src="javascript/quote.js"></script>
     <script src="javascript/backgrounds.js"></script>
   </body>

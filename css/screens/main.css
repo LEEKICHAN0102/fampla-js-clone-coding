@@ -114,4 +114,6 @@
 .only-text p {
   font-size: x-small;
   margin-left: 10px;
+  margin-top: 20px;
+  opacity: 0.7;
 }
