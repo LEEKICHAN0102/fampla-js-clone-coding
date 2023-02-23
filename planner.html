@@ -11,7 +11,7 @@
   <body>
     <h1 class="login__main-title">Fampla</h1>
     <h2 id="clock">00:00:00</h2>
-    <form id="role-box">
+    <form id="role-box" class="role-box hidden">
       <label for="family-role"
         >가족 구성원 중 자신의 역할은 무엇 인가요? :</label
       >
@@ -34,13 +34,13 @@
       </datalist>
       <button>등록</button>
     </form>
-    <h1 id="greeting" class="hidden"></h1>
+    <h1 id="greeting" class="greeting hidden"></h1>
     <form id="POR-form">
       <input
         type="text"
         placeholder="계획 또는 부탁을 적은 후 Enter를 눌러 업로드 하세요!"
         required
-        size="67"
+        size="73"
       />
     </form>
     <ul id="POR-list"></ul>
@@ -51,6 +51,7 @@
     </div>
 
     <script src="javascript/role.js"></script>
+    <script src="javascript/por.js"></script>
     <script src="javascript/clock.js"></script>
     <script src="javascript/quote.js"></script>
     <script src="javascript/backgrounds.js"></script>

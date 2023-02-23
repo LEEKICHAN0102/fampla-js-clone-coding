@@ -2,13 +2,29 @@ const roleBoxForm = document.querySelector("#role-box");
 const roleBoxInput = document.querySelector("#role-box input");
 const greeting = document.querySelector("#greeting");
 
-function onSubmit(event) {
+const HIDDEN_KEY = "hidden";
+const USER_KEY = "username";
+
+function onLoginSubmit(event) {
   event.preventDefault();
-  roleBoxForm.removeAttribute("id");
-  roleBoxForm.classList.add("hidden");
+  roleBoxForm.classList.add(HIDDEN_KEY);
   const username = roleBoxInput.value;
-  greeting.innerText = "안녕하세요 " + username + "!";
-  greeting.classList.remove("hidden");
+  localStorage.setItem(USER_KEY, username);
+  appearGreeting(username);
 }
 
-roleBoxForm.addEventListener("submit", onSubmit);
+function hiddenRoleBox() {}
+
+function appearGreeting(savedUsername) {
+  greeting.innerText = `안녕하세요 ${savedUsername} !`;
+  greeting.classList.remove(HIDDEN_KEY);
+}
+
+roleBoxForm.addEventListener("submit", onLoginSubmit);
+const savedUsername = localStorage.getItem(USER_KEY);
+
+if (savedUsername === null) {
+  roleBoxForm.classList.remove(HIDDEN_KEY);
+} else {
+  appearGreeting(savedUsername);
+}
