@@ -12,9 +12,12 @@ function deletePOS(event) {
 
 function paintPOS(newPOS) {
   const li = document.createElement("li");
+  const user = document.createElement("span");
   const span = document.createElement("span");
   const button = document.createElement("button");
   button.innerText = "💖";
+  user.innerText = localStorage.getItem(USER_KEY) + `:`;
+  li.appendChild(user);
   li.appendChild(span);
   li.appendChild(button);
   button.addEventListener("click", deletePOS);

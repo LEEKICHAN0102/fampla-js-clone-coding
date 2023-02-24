@@ -8,12 +8,11 @@ const USER_KEY = "username";
 function onLoginSubmit(event) {
   event.preventDefault();
   roleBoxForm.classList.add(HIDDEN_KEY);
+  retry.classList.remove(HIDDEN_KEY);
   const username = roleBoxInput.value;
   localStorage.setItem(USER_KEY, username);
   appearGreeting(username);
 }
-
-function hiddenRoleBox() {}
 
 function appearGreeting(savedUsername) {
   greeting.innerText = `안녕하세요 ${savedUsername} !`;
