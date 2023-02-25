@@ -13,8 +13,8 @@
 }
 
 .greeting {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  margin-left: 300px;
   color: white;
   margin-top: 20px;
 }
@@ -78,6 +78,10 @@ li button {
   margin-left: 10px;
   background-color: bisque;
   border-radius: 5px;
+}
+
+#retry {
+  display: inline-block;
 }
 
 .hidden {

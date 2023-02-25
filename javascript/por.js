@@ -3,14 +3,19 @@ const PORList = document.getElementById("POR-list");
 const PORInput = document.querySelector("#POR-form input");
 const PORUsername = document.querySelector("#role-box input");
 
-let planOrRequest = [];
+const planOrRequest = [];
+const POR_KEY = "planOrRequest";
 
-function deletePOS(event) {
+function savePOR() {
+  localStorage.setItem(POR_KEY, JSON.stringify(planOrRequest));
+}
+
+function deletePOR(event) {
   const li = event.target.parentElement;
   li.remove();
 }
 
-function paintPOS(newPOS) {
+function paintPOR(newPOR) {
   const li = document.createElement("li");
   const user = document.createElement("span");
   const span = document.createElement("span");
@@ -20,16 +25,24 @@ function paintPOS(newPOS) {
   li.appendChild(user);
   li.appendChild(span);
   li.appendChild(button);
-  button.addEventListener("click", deletePOS);
-  span.innerText = newPOS;
+  button.addEventListener("click", deletePOR);
+  span.innerText = newPOR;
   PORList.appendChild(li);
 }
 
 function handleToDoSubmit(event) {
   event.preventDefault();
-  const newPOS = PORInput.value;
+  const newPOR = PORInput.value;
   PORInput.value = "";
-  paintPOS(newPOS);
+  planOrRequest.push(newPOR);
+  paintPOR(newPOR);
+  savePOR();
 }
 
 PORForm.addEventListener("submit", handleToDoSubmit);
+const savedPOR = localStorage.getItem(POR_KEY);
+
+if (savedPOR !== null) {
+  const parsedPOR = JSON.parse(savedPOR);
+  parsedPOR.forEach();
+}
