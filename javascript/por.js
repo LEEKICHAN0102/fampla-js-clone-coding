@@ -3,7 +3,7 @@ const PORList = document.getElementById("POR-list");
 const PORInput = document.querySelector("#POR-form input");
 const PORUsername = document.querySelector("#role-box input");
 
-const planOrRequest = [];
+let planOrRequest = [];
 const POR_KEY = "planOrRequest";
 
 function savePOR() {
@@ -13,6 +13,10 @@ function savePOR() {
 function deletePOR(event) {
   const li = event.target.parentElement;
   li.remove();
+  planOrRequest = planOrRequest.filter(
+    (planOrRequest) => planOrRequest.id !== li.id
+  );
+  savePOR();
 }
 
 function paintPOR(newPOR) {
@@ -26,7 +30,7 @@ function paintPOR(newPOR) {
   li.appendChild(span);
   li.appendChild(button);
   button.addEventListener("click", deletePOR);
-  span.innerText = newPOR;
+  span.innerText = newPOR.text;
   PORList.appendChild(li);
 }
 
@@ -34,8 +38,12 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newPOR = PORInput.value;
   PORInput.value = "";
-  planOrRequest.push(newPOR);
-  paintPOR(newPOR);
+  const newPORobj = {
+    text: newPOR,
+    id: Date.now(),
+  };
+  planOrRequest.push(newPORobj);
+  paintPOR(newPORobj);
   savePOR();
 }
 
@@ -44,5 +52,6 @@ const savedPOR = localStorage.getItem(POR_KEY);
 
 if (savedPOR !== null) {
   const parsedPOR = JSON.parse(savedPOR);
-  parsedPOR.forEach();
+  planOrRequest = parsedPOR;
+  parsedPOR.forEach(paintPOR);
 }
