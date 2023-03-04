@@ -55,3 +55,5 @@ if (savedPOR !== null) {
   planOrRequest = parsedPOR;
   parsedPOR.forEach(paintPOR);
 }
+//this part had issue like nothing delete in local storage when i click heart btn
+// fixed it 03-06

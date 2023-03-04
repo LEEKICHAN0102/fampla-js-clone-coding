@@ -43,4 +43,6 @@ function birthDayCount() {
 
 birthDayCount();
 setInterval(birthDayCount, 1000 * 60 * 60 * 24);
+
 // I know it's Hard Coding;; but Not Meaningless.. i hope so
+// This part is birthday count
