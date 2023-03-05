@@ -1,3 +1,12 @@
+.boxbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxbox button {
+  margin: 30px 20px 0px 0px;
+}
+
 #clock {
   font-size: 30px;
   display: flex;
@@ -5,35 +14,31 @@
   color: white;
 }
 
-.role-box {
+#login-form {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   color: white;
 }
 
-.greeting {
-  display: inline-block;
-  margin-left: 300px;
+#greeting {
+  display: flex;
+  justify-content: center;
   color: white;
-  margin-top: 20px;
+  margin: 10px 0px;
 }
 
-#family-role {
-  margin-left: 9px;
-}
-
-#POR-form {
+#todo-form {
   display: flex;
   margin: 5px 0px;
   justify-content: center;
 }
 
-#POR-form input::placeholder {
+#todo-form input::placeholder {
   text-align: center;
 }
 
-#POR-form input:focus::placeholder {
+#todo-form input:focus::placeholder {
   color: transparent;
 }
 
@@ -80,16 +85,12 @@ li button {
   border-radius: 5px;
 }
 
-#retry {
-  display: inline-block;
-}
-
-.hidden {
-  display: none;
-}
-
 #weather {
   text-align: center;
   margin-top: 10px;
   color: white;
+}
+
+.hidden {
+  display: none;
 }

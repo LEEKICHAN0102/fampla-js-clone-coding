@@ -9,57 +9,38 @@
     <title>Fampla-Planner</title>
   </head>
   <body>
-    <h1 class="login__main-title">Fampla</h1>
+    <div class="boxbox">
+      <h1 class="login__main-title">Fampla</h1>
+      <button type="reset" id="reset">❌</button>
+    </div>
     <h2 id="clock">00:00:00</h2>
     <div id="weather">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <form id="role-box" class="role-box hidden">
-      <label for="family-role"
-        >가족 구성원 중 자신의 역할은 무엇 인가요? :</label
-      >
+    <form id="login-form" class="hidden">
       <input
-        list="role"
-        id="family-role"
-        placeholder="먼저 선택후 등록해주세요!"
         required
-        maxlength="6"
-        name="family-role"
-      />
-
-      <datalist id="role">
-        <option value="할아버지👴"></option>
-        <option value="할머니👵"></option>
-        <option value="아버지👨"></option>
-        <option value="어머니👩"></option>
-        <option value="도련님🧑"></option>
-        <option value="아가씨👧"></option>
-        <option value="댕댕이🐶"></option>
-      </datalist>
-      <button>등록</button>
-    </form>
-    <h1 id="greeting" class="greeting hidden"></h1>
-    <button type="reset" id="reset" class="hidden">❌</button>
-    <form id="POR-form">
-      <input
+        maxlength="15"
         type="text"
-        placeholder="계획 또는 부탁을 적은 후 Enter를 눌러 업로드 하세요!"
-        required
-        size="73"
+        placeholder="이름을 입력해주세요!"
       />
+      <input type="submit" value="Log In" />
     </form>
-    <ul id="POR-list"></ul>
-
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+      <input type="text" placeholder="작성 후 Enter" required input size="28" />
+    </form>
+    <ul id="todo-list"></ul>
     <div id="quote">
       <span></span>
       <span></span>
     </div>
 
+    <script src="javascript/greeting.js"></script>
     <script src="javascript/weather.js"></script>
-    <script src="javascript/role.js"></script>
-    <script src="javascript/por.js"></script>
+    <script src="javascript/todo.js"></script>
     <script src="javascript/clock.js"></script>
     <script src="javascript/quote.js"></script>
     <script src="javascript/backgrounds.js"></script>

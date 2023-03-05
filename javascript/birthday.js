@@ -32,13 +32,13 @@ function birthDayCount() {
   const dDay = Math.floor(dCnt / (1000 * 60 * 60 * 24));
   const dogDay = Math.floor(dogCnt / (1000 * 60 * 60 * 24));
 
-  grandfather.innerText = `${gDay}일 남았어요!`;
-  grandmother.innerText = `${gmDay}일 남았어요!`;
-  father.innerText = `${fDay}일 남았어요!`;
-  mother.innerText = `${mDay}일 남았어요!`;
-  son.innerText = `${sDay}일 남았어요!`;
-  daughter.innerText = `${dDay}일 남았어요!`;
-  dog.innerText = `${dogDay}일 남았어요!`;
+  grandfather.innerText = `${gDay}일 남았어요! 🎉🎂`;
+  grandmother.innerText = `${gmDay}일 남았어요! 🎉🎂`;
+  father.innerText = `${fDay}일 남았어요! 🎉🎂`;
+  mother.innerText = `${mDay}일 남았어요! 🎉🎂`;
+  son.innerText = `${sDay}일 남았어요! 🎉🎂`;
+  daughter.innerText = `${dDay}일 남았어요! 🎉🎂`;
+  dog.innerText = `${dogDay}일 남았어요! 🎉🎂`;
 }
 
 birthDayCount();

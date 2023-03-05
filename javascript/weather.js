@@ -13,7 +13,7 @@ function onGeoOk(position) {
 
       Weather.innerText = data.weather[0].main;
       city.innerText = data.name;
-      temperature.innerText = data.main.temp;
+      temperature.innerText = data.main.temp + `${" ℃"}`;
     });
 }
 
